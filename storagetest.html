@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+    </head>
+    <body>
+        <input type="text" id="yourname">
+        <button id="btn">click</button>
+
+        <script>
+            var namevalue=localStorage.getItem("name")
+            console.log(namevalue)
+            if(namevalue ){
+                yourname.value=namevalue
+            }
+
+            btn.onclick = function(){
+                console.log(yourname.value)
+                localStorage.setItem("name",yourname.value)
+            }
+
+        </script>
+    </body>
+
+</html>
